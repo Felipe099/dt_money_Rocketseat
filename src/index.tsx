@@ -1,8 +1,8 @@
-//import { createRoot } from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { createServer } from 'miragejs';
 import { App } from './App';
-import React from 'react';
-import ReactDOM from 'react-dom';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
 
 createServer({
     routes() {
@@ -23,14 +23,15 @@ createServer({
     },
 });
 
-//const container = document.getElementById('app');
-//const root = createRoot(container);
-//root.render(<App />); 
+
+const container = document.getElementById('root');
+const root = createRoot(container!);
+root.render(<App />);
 
 
-ReactDOM.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
-    document.getElementById('root')
-);
+// ReactDOM.render(
+//     <React.StrictMode>
+//         <App />
+//     </React.StrictMode>,
+//     document.getElementById('root')
+// );
